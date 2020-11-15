@@ -1,0 +1,27 @@
+.drawer{
+    flex: 1;
+    display: flex;
+}
+.drawer__menu{
+    flex: 1;
+}
+.drawer__logo{
+    text-align: center;
+    padding: 1rem 0;
+}
+.List{
+    width: 300px;
+}
+.github-section{
+    display: flex;
+    flex: 1;
+    padding: 1rem 0;
+    justify-content: center;
+    align-items: center;
+}
+.github__link{
+    color: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
