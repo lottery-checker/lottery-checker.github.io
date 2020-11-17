@@ -1,0 +1,65 @@
+.checker{
+  width: 100%;
+}
+.checker__container{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-top: 20px;
+}
+.checker__forcharacters{
+  display: flex;
+  width: 15%;
+  padding: 5px 10px;
+  margin-right: 20px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+.checker__forcharacters > select {
+  outline-width: 0;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.checker__fields{
+  display: flex;
+  /* flex: 2; */
+  width: 5%;
+  padding: 5px;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: #ffffff;
+}
+.checker__fields > select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px 5px;
+  background-color: transparent;
+  outline-width: 0;
+  border: none;
+}
+.checker__button{
+  display: flex;
+  justify-content: center;
+  width: 10%;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+.checker__button button{
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  outline-width: 0;
+  cursor: pointer;
+}
