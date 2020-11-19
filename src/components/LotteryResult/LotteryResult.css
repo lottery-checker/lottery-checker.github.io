@@ -1,0 +1,39 @@
+/* . {
+    text-align: left;
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    background-color: rgb(161, 160, 158);
+} */
+
+.lottery-result {
+    box-sizing: border-box;
+    align-items: center;
+    margin-left: 100px;
+
+}
+
+h4 {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.lottery-result-body:after {
+    box-sizing: border-box;
+    display: table;
+    clear: both;
+}
+
+.lottery-result-button {
+
+    float: left;
+    width: 33.33%;
+
+    padding: 20px;
+    margin: 20px;
+
+
+    background-color: orange;
+    width: 23% !important;
+
+}
