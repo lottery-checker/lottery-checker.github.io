@@ -1,16 +1,28 @@
 import {lotteryResult} from '../Config/LotteryList';
 import './LotteryResult.css';
+import { makeStyles } from '@material-ui/core/styles';
+import {Container,Grid,Paper }  from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({ 
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',  
+    background: '#fAA700',
+  },
+}));
 const LotteryResult = () => {
-  console.log(lotteryResult)
+    const classes = useStyles();
     return(
-      <div className="lottery-result">
-        <h4> ထွက်ရှိမည့် ထီဆုကြီးများ</h4>
-        <div className=" lottery-result-body">
-          {lotteryResult.map(( index,value ) =>         
-              <div key={value} className='lottery-result-button'  >{index.label}</div>
-          )}
-        </div>
-      </div>  
+      <Container>
+        <h4> ထွက်ရှိမည့် ထီဆုကြီးများ</h4>   
+        <Grid container>          
+          {lotteryResult.map(( lottery,key ) =>           
+              <Grid item xs={4}  key={key} className='lottery-result-button'  >
+                <Paper className={classes.paper}> {lottery.label}</Paper>               
+              </Grid>          
+          )}     
+         </Grid>    
+      </Container>  
     );
 }
 export default LotteryResult;
