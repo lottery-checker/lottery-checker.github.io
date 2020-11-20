@@ -17,7 +17,7 @@ const LotteryResult = () => {
         <h4> ထွက်ရှိမည့် ထီဆုကြီးများ</h4>   
         <Grid container>          
           {lotteryResult.map(( lottery,key ) =>           
-              <Grid item xs={4}  key={key} className='lottery-result-button'  >
+              <Grid item xs={4} sm={12} key={key} className='lottery-result-button'  >
                 <Paper className={classes.paper}> {lottery.label}</Paper>               
               </Grid>          
           )}     
