@@ -23,7 +23,6 @@ function App() {
     <div className="App">
       <Nav/>
       <Drawer />
-      {JSON.stringify(times)}
       {
         selectedMenu === 'home' &&
         <Home />
@@ -32,6 +31,7 @@ function App() {
         selectedMenu === 'about' &&
         <About />
       }
+      {JSON.stringify(times)}
     </div>
   );
 }

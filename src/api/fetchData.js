@@ -2,7 +2,8 @@ import { zip, timer, of } from 'rxjs';
 import { fromFetch } from 'rxjs/fetch';
 import { map, catchError, mergeMap } from 'rxjs/operators';
 export const fetchData = () => {
-    const URL = 'http://gsx2json.com/api?id=1UlhN-RxMqRYxWG3dzdNqBp1ii673_3g_x79siiLyFxs&columns=false';
+    const REACT_APP_API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+    const URL = `${REACT_APP_API_ENDPOINT}/api?id=1UlhN-RxMqRYxWG3dzdNqBp1ii673_3g_x79siiLyFxs&columns=false`;
     // wait for both fetch and a 500ms timer to finish
     return zip(
       fromFetch(URL).pipe( mergeMap(r => r.json()) ),
