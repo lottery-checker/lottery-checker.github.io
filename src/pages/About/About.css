@@ -1,0 +1,10 @@
+.about-text {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-logo {
+    display: flex;
+    justify-content: center;
+    padding: 0px 200px;
+}
