@@ -1,99 +1,51 @@
 import React from 'react';
 import './Checker.css';
+import {alphabetLists} from '../../../config/alphabets';
+import {numberLists} from '../../../config/numbers';
 
 export const Checker = () => {
+  const alphabets = alphabetLists.map((value) =>
+    <option key={value} value={value}>{value}</option>
+  );
+  const numbers = numberLists.map((value) => 
+    <option key={value} value={value}>{value}</option>
+  )
   return (
     <div className="checker">
       <div className="checker__container">
-        <div className="checker__forcharacters">
-          <select name="characters" id="characters">
-            <option value="">က</option>
-            <option value="">က</option>
-            <option value="">က</option>
+        <div className="checker__foralphabets">
+          <select name="alphabets" id="alphabets">
+            {alphabets}
           </select>
         </div>
         <div className="checker__fields">
           <select name="checkers">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+            {numbers}
           </select>
         </div>
         <div className="checker__fields">
           <select name="checkers">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+            {numbers}
           </select>
         </div>
         <div className="checker__fields">
           <select name="checkers">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+            {numbers}
           </select>
         </div>
         <div className="checker__fields">
           <select name="checkers">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+            {numbers}
           </select>
         </div>
         <div className="checker__fields">
           <select name="checkers">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+            {numbers}
           </select>
         </div>
         <div className="checker__fields">
           <select name="checkers">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+            {numbers}
           </select>
         </div>
         <div className="checker__button">

@@ -7,7 +7,7 @@ The app is live at [here](https://lottery-checker.github.io).
 1. Install your dependencies
 
     ```
-    cd path/to/lottery-checker; npm install
+    cd path/to/lottery-checker; npm install or yarn install
     ```
 2. Start Development Server
 
