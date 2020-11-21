@@ -2,6 +2,7 @@ export const initialState = {
     menuOpened: false,
     selectedMenu: 'home',
     times: [],
+    error: false,
 };
 export const actionTypes = {
     SET_MENU_OPENED: "SET_MENU_OPENED",
@@ -27,7 +28,8 @@ export const reducer = (state , action) => {
         case actionTypes.SET_TIMES: {
             return {
                 ...state,
-                times: action.payload,
+                times: action.payload.data,
+                error: action.payload.error,
             }
         }
         default: return state;

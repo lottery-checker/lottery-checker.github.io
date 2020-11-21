@@ -1,13 +1,17 @@
-import { zip, timer } from 'rxjs';
+import { zip, timer, of } from 'rxjs';
 import { fromFetch } from 'rxjs/fetch';
-import { map, mergeMap } from 'rxjs/operators';
+import { map, catchError, mergeMap } from 'rxjs/operators';
 export const fetchData = () => {
-    const URL = 'http://gsx2json.com/api?id=1UlhN-RxMqRYxWG3dzdNqBp1ii673_3g_x79siiLyFxs&sheet=2&columns=false';
+    const URL = 'http://gsx2json.com/api?id=1UlhN-RxMqRYxWG3dzdNqBp1ii673_3g_x79siiLyFxs&columns=false';
+    // wait for both fetch and a 500ms timer to finish
     return zip(
-        fromFetch(URL).pipe( mergeMap(r => r.json()) ),
-        timer(500) // set a timer for 500ms
-      ).pipe(
-        // then take only the first value (fetch result)
-        map(([data]) => data)
-      )
+      fromFetch(URL).pipe( mergeMap(r => r.json()) ),
+      timer(500) // set a timer for 500ms
+    ).pipe(
+      // then take only the first value (fetch result)
+      map(([data]) => ({ error: false, data: data.rows})),
+      catchError((err) => {
+        return of({ error: true, data: [], message: err.message })
+      })
+    )
 }
