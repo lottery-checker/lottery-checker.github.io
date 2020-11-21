@@ -29,7 +29,6 @@
 }
 .checker__fields{
   display: flex;
-  /* flex: 2; */
   width: 5%;
   padding: 5px;
   margin-right: 20px;

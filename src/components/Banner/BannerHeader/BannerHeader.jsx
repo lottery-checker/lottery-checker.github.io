@@ -1,10 +1,10 @@
 import React from 'react';
 import './BannerHeader.css';
 
-export const BannerHeader = () => {
+export const BannerHeader = ({title}) => {
   return (
     <div className="banner__header">
-      <h3 className="banner__header--yellow">၂၁ ကြိမ်မြောက်</h3>
+      <h3 className="banner__header--yellow">{title}</h3>
     </div>
   )
 }

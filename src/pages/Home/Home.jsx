@@ -4,7 +4,7 @@ import './Home.css';
 const Home = () => {
     return (
         <div className='Home'>
-          <Banner/>
+          <Banner title="၂၁ ကြိမ်မြောက်"/>
         </div>
     )
 }
