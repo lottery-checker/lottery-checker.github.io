@@ -4,8 +4,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { useStateValue } from '../../provider';
+import { actionTypes } from '../../reducer';
 import './Nav.css';
-
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -17,7 +18,14 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
 }));
-const Nav = ({ onMenuClick }) => {
+const Nav = () => {
+  const [{ menuOpened }, dispatch] = useStateValue();
+  const onMenuClick = () => {
+    dispatch({
+      type: actionTypes.SET_MENU_OPENED,
+      payload: !menuOpened,
+    })
+  }
     const classes = useStyles();
     return (
         <AppBar position="static" className='Nav'>
