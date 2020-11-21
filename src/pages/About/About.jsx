@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles,Container,Grid} from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
 import './About.css';
+import {contributors} from '../../components/Config/LotteryList';
 
 const useStyles = makeStyles((theme) => ({ 
   large: {
@@ -23,19 +24,20 @@ const About = () => {
             <h3 className='about-text'>Contributors</h3>
           </Grid> 
           <Grid item xs={12}>          
-            <div className="About__logo">                 
-                <Avatar alt="" src="https://avatars2.githubusercontent.com/u/49815662?s=400&u=18ad3740a825466714b856fc2a715ec8b4d63807&v=4" className={classes.large} />       
-                <Avatar alt="SArkar Htet" src="https://avatars1.githubusercontent.com/u/47824384?s=460&u=91c5d3625b88c9b716ec0edf422e13d731010425&v=4" className={classes.large}/>        
-                <Avatar alt="WinPhyoEi" src="https://avatars3.githubusercontent.com/u/41888392?s=460&u=5a25a4bddceb857735cd9678ceb9b3e8ea7a3568&v=4"   className={classes.large}/>           
+            <div className="About__logo">                
+                {contributors.map( (contributor,index) => { 
+                    return(
+                        <Avatar alt={contributor.name} key={index} src={contributor.image} className={classes.large}/> 
+                    )                       
+                })}
             </div>
-            </Grid>
-           
+            </Grid>           
             <Grid item xs={12}>
                 <h3 className='About__header'>Open Source</h3>
                 <p>https://lottery-checker.github.io/</p>
             </Grid>
-          </Grid>
-        </Container>
+          </Grid>          
+        </Container>    
     )
 }
 

@@ -4,6 +4,7 @@ import Drawer from './components/Drawer/Drawer';
 import Nav from './components/Nav/Nav';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
+import Footer from './components/Footer/Footer';
 function App() {
   const [toggle, setToggle] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState('home');
@@ -31,7 +32,8 @@ function App() {
       {
         selectedMenu === 'about' &&
         <About />
-      }
+      }    
+      <Footer/> 
     </div>
   );
 }
