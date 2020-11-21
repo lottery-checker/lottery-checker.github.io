@@ -6,9 +6,7 @@ const LotteryList = () => {
         <Container>
           <h4> ထီဆုကြီးများ </h4>
            {lotteryList.map( (lottery,index) => 
-
-            <Grid  item xs={12} key={index}>
-             
+            <Grid  item xs={12} key={index}>             
               <p> {lottery}</p>
             </Grid>  
            )}
