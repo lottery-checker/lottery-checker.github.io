@@ -1,0 +1,3 @@
+.banner__header > .banner__header--yellow{
+  color: var(--primary-yellow) !important;
+}

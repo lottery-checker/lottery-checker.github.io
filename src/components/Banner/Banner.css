@@ -1,0 +1,23 @@
+.banner{
+  display: flex;
+}
+.banner__image{
+  display: flex;
+  flex: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.banner--layer{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.banner--layer .banner__data{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
