@@ -10,7 +10,7 @@ import { actionTypes } from './reducer';
 import { useStateValue } from './provider';
 import { fetchData } from './api/fetchData';
 function App() {
-  const [{ selectedMenu, times, loading }, dispatch] = useStateValue();
+  const [{ selectedMenu, loading }, dispatch] = useStateValue();
   useEffect(() => {
     const subscription = fetchData()
     .subscribe(({ error, data, loading }) => {
@@ -41,7 +41,6 @@ function App() {
         <About />
       }    
       <Footer/>
-      {JSON.stringify(times)}
     </div>
   );
 }

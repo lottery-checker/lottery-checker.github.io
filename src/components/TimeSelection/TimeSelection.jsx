@@ -1,14 +1,21 @@
 import React from 'react';
 import './TimeSelection.css';
 import { useStateValue } from '../../provider'
+import { actionTypes } from '../../reducer'
 export const TimeSelection = () => {
-    const [ { times }] = useStateValue();
+    const [ { times }, dispatch] = useStateValue();
+    const onSelectChange = (e) => {
+        dispatch({
+            type: actionTypes.SET_SELECTED_TIME,
+            payload: times[e.target.value]
+        });
+    };
     return (
         <div className='TimeSelection'>
-            <select className='TimeSelection__select'>
+            <select className='TimeSelection__select' onChange={onSelectChange}>
                 {
-                    times.map(({ sheetid, label }, index) => (
-                        <option key={index} value={sheetid}>{label}</option>
+                    times.map(({ time, label }, index) => (
+                        <option key={index} value={index}>{label}</option>
                     ))
                 }
             </select>
