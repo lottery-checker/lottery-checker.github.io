@@ -7,6 +7,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { useStateValue } from '../../provider';
 import { actionTypes } from '../../reducer';
 import './Nav.css';
+import TimeSelection from '../TimeSelection/TimeSelection';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
       flexGrow: 1,
+      textAlign: 'left',
     },
 }));
 const Nav = () => {
@@ -36,6 +38,7 @@ const Nav = () => {
               <Typography variant="h6" className={classes.title}>
                   {process.env.REACT_APP_WEBSITE_NAME}
               </Typography>
+              <TimeSelection />
             </Toolbar>
       </AppBar>
     )
