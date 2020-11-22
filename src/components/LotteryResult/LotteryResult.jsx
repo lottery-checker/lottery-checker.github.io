@@ -1,4 +1,4 @@
-import {lotteryResult} from '../Config/LotteryList';
+import { lotteryResult } from '../Config/LotteryList';
 import './LotteryResult.css';
 import { makeStyles } from '@material-ui/core/styles';
 import {Container,Grid,Paper }  from '@material-ui/core';
@@ -14,7 +14,7 @@ const LotteryResult = () => {
     const classes = useStyles();
     return(
       <Container>
-        <h4> ထွက်ရှိမည့် ထီဆုကြီးများ</h4>   
+        <h4>ထွက်ရှိမည့် ထီဆုကြီးများ</h4>   
         <Grid container spacing={3}>          
           {lotteryResult.map(( lottery,key ) =>           
               <Grid item xs={12} sm={4} key={key} className='lottery-result-button'  >

@@ -24,7 +24,7 @@ describe('TimeSelection', () => {
         });
         it('render options', () => {
             subject.childAt(0).find('option').forEach((node, index) => {
-                expect(node.prop('value')).toEqual(mockTimes[index].sheetid);
+                expect(node.prop('value')).toEqual(index);
                 expect(node.text()).toEqual(mockTimes[index].label);
             });
         });
