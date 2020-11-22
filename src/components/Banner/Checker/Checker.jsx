@@ -13,44 +13,47 @@ export const Checker = () => {
   return (
     <div className="checker">
       <div className="checker__container">
-        <div className="checker__foralphabets">
-          <select name="alphabets" id="alphabets">
+        <div className="checker__for__alphabets">
+          <select name="alphabets" id="alphabets" className="">
             {alphabets}
           </select>
         </div>
+        
         <div className="checker__fields">
           <select name="checkers">
             {numbers}
           </select>
-        </div>
-        <div className="checker__fields">
+        
+        
+          <select name="checkers">
+            {numbers}
+          </select>
+        
+        
+          <select name="checkers">
+            {numbers}
+          </select>
+        
+        
+          <select name="checkers">
+            {numbers}
+          </select>
+        
+        
+          <select name="checkers">
+            {numbers}
+          </select>
+        
+        
           <select name="checkers">
             {numbers}
           </select>
         </div>
-        <div className="checker__fields">
-          <select name="checkers">
-            {numbers}
-          </select>
-        </div>
-        <div className="checker__fields">
-          <select name="checkers">
-            {numbers}
-          </select>
-        </div>
-        <div className="checker__fields">
-          <select name="checkers">
-            {numbers}
-          </select>
-        </div>
-        <div className="checker__fields">
-          <select name="checkers">
-            {numbers}
-          </select>
-        </div>
+        
         <div className="checker__button">
           <button>ထီတိုက်ရန်</button>
         </div>
+        
       </div>
     </div>
   )

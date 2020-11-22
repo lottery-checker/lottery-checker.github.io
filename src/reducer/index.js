@@ -3,6 +3,7 @@ export const initialState = {
     selectedMenu: 'home',
     times: [],
     error: false,
+    loading: true,
 };
 export const actionTypes = {
     SET_MENU_OPENED: "SET_MENU_OPENED",
@@ -30,6 +31,7 @@ export const reducer = (state , action) => {
                 ...state,
                 times: action.payload.data,
                 error: action.payload.error,
+                loading: action.payload.loading,
             }
         }
         default: return state;

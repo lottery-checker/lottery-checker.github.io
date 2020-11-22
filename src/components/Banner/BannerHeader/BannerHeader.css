@@ -1,3 +1,4 @@
 .banner__header > .banner__header--yellow{
+  display: flex;
   color: var(--primary-yellow) !important;
 }
