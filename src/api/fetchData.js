@@ -10,9 +10,9 @@ export const fetchData = () => {
       timer(500) // set a timer for 500ms
     ).pipe(
       // then take only the first value (fetch result)
-      map(([data]) => ({ error: false, data: data.rows})),
+      map(([data]) => ({ error: false, data: data.rows, loading: false})),
       catchError((err) => {
-        return of({ error: true, data: [], message: err.message })
+        return of({ error: true, data: [], loading: false, message: err.message })
       })
     )
 }

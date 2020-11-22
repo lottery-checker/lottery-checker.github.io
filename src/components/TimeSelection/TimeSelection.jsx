@@ -1,13 +1,14 @@
 import React from 'react';
 import './TimeSelection.css';
+import { useStateValue } from '../../provider'
 const TimeSelection = () => {
-    const times = ['၂၂ ကြိမ်', '၂၁ ကြိမ်', '၂၀ ကြိမ်'];
+    const [ { times }] = useStateValue();
     return (
         <div className='TimeSelection'>
             <select className='TimeSelection__select'>
                 {
-                    times.map((time, index) => (
-                        <option key={index} value="1">{time}</option>
+                    times.map(({ time, label }, index) => (
+                        <option key={index} value={time}>{label}</option>
                     ))
                 }
             </select>
