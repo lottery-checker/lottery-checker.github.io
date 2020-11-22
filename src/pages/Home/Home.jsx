@@ -1,4 +1,5 @@
 import React from 'react';
+import Banner from '../../components/Banner/Banner';
 import './Home.css';
 import LotteryList from '../../components/LotteryList/LotteryList';
 import LotteryResult from  '../../components/LotteryResult/LotteryResult';
@@ -6,10 +7,9 @@ import LotteryResult from  '../../components/LotteryResult/LotteryResult';
 const Home = () => {
     return (
         <div className='Home'>
-            Home Page
-            <LotteryList />
-            <LotteryResult/>
-                   
+          <Banner title="၂၁ ကြိမ်မြောက်"/>
+          <LotteryList />
+          <LotteryResult/>
         </div>
     )
 }

@@ -11,8 +11,17 @@ The app is live at [here](https://lottery-checker.github.io).
     ```
 2. Start Development Server
 
+    2.1 Window
     ```
-    npm start or yarn start
+    set "REACT_APP_API_ENDPOINT=<REACT_APP_API_ENDPOINT>" && npm start
+    or
+    set "REACT_APP_API_ENDPOINT=<REACT_APP_API_ENDPOINT>" && yarn start
+    ```
+    2.2 Linux, macOS
+    ```
+    REACT_APP_API_ENDPOINT=<REACT_APP_API_ENDPOINT> npm start 
+    or 
+    REACT_APP_API_ENDPOINT=<REACT_APP_API_ENDPOINT> yarn start
     ```
 ## Contribution Guide
 We will make safe for `main` brand.
