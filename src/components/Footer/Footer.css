@@ -1,0 +1,10 @@
+.Footer {  
+  
+    padding: 1rem;
+    background-color: var(--primary-blue) !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: white;    
+    width: 100%;
+}

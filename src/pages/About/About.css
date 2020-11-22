@@ -1,0 +1,10 @@
+.About__header {
+    text-align: center;
+    padding: 20px;
+}
+
+.About__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
