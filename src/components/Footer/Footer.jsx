@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className="Footer" >             
           <Grid item xs={12} >             
-            Copyright {DateTime.local().c.year}, All right reserved.
+          &#169; Copyright {DateTime.local().c.year}, All right reserved.
           </Grid>              
         </div>
     );

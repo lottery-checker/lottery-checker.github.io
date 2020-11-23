@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
     const classes=useStyles();
     return (
-        <Container>
+        <Container className='About'>
           <Grid container spacing={3}>
           <Grid item xs={12} sm={12}>
             <h3 className='About__header'>About Us </h3>

@@ -5,12 +5,12 @@ import LotteryList from '../../components/LotteryList/LotteryList';
 import LotteryResult from  '../../components/LotteryResult/LotteryResult';
 
 const Home = () => {
-    return (
+    return (     
         <div className='Home'>
           <Banner title="၂၁ ကြိမ်မြောက်"/>
           <LotteryList />
           <LotteryResult/>
-        </div>
+         </div>     
     )
 }
 export default Home
