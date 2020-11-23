@@ -6,8 +6,8 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useStateValue } from '../../provider';
 import { actionTypes } from '../../reducer';
-import './Nav.css';
 import TimeSelection from '../TimeSelection/TimeSelection';
+import './Nav.css';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'left',
     },
 }));
-const Nav = () => {
+export const Nav = () => {
   const [{ menuOpened }, dispatch] = useStateValue();
   const onMenuClick = () => {
     dispatch({
@@ -28,19 +28,19 @@ const Nav = () => {
       payload: !menuOpened,
     })
   }
-    const classes = useStyles();
-    return (
-        <AppBar position="static" className='Nav'>
-            <Toolbar>
-              <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={onMenuClick}>
-                  <MenuIcon />
-              </IconButton>
-              <Typography variant="h6" className={classes.title}>
-                  {process.env.REACT_APP_WEBSITE_NAME}
-              </Typography>
-              <TimeSelection />
-            </Toolbar>
-      </AppBar>
-    )
+  const classes = useStyles();
+  return (
+      <AppBar position="static" className='Nav'>
+          <Toolbar>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={onMenuClick}>
+                <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" className={classes.title}>
+                {process.env.REACT_APP_WEBSITE_NAME}
+            </Typography>
+            <TimeSelection />
+          </Toolbar>
+    </AppBar>
+  )
 }
 export default Nav;

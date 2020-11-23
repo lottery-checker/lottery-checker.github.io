@@ -1,16 +1,22 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
-import './Home.css';
 import LotteryList from '../../components/LotteryList/LotteryList';
 import LotteryResult from  '../../components/LotteryResult/LotteryResult';
-
+import { useStateValue } from '../../provider';
+import './Home.css';
 const Home = () => {
-    return (     
+    const [{ selectedTime }] = useStateValue();
+    const { label, status } = selectedTime;
+    return (
         <div className='Home'>
-          <Banner title="၂၁ ကြိမ်မြောက်"/>
-          <LotteryList />
-          <LotteryResult/>
-         </div>     
+          <Banner title={`${label} မြောက်`}/>
+          {
+            status === 'FINISHED' ?
+            <LotteryList />
+            :
+            <LotteryResult/>
+          }
+        </div>
     )
 }
 export default Home
